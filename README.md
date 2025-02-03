@@ -41,7 +41,7 @@ You can run the project on your local machine with the following steps:
 ## Api Documentation:
 
 ## Endpoint URL:
-[endpoint-url] (https://stage1-task-hng12.vercel.app/api/classify-number/[put any integer here])
+[endpoint-url] (https://stage1-task-hng12.vercel.app/api/classify-number?number=20)
 
 # Method:
 GET
@@ -80,4 +80,4 @@ The response will be in JSON format and includes the following fields:
 
 ## Example Usage
 
- [GET] (https://stage1-task-hng12.vercel.app/api/classify-number/[put any integer here])
+ [GET] (https://stage1-task-hng12.vercel.app/api/classify-number?number=20)
