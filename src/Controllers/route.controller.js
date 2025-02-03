@@ -5,7 +5,13 @@ import axios from 'axios';
 import { isPerfect, isPrime, isArmstrong } from "./helper.functions.js";
 export const routerController = async(req, res)=>{
 
-    const num = parseInt(req.query.number);
+    let num = req.query.number;
+
+
+    num = num.replace(/[^0-9-]/g, '');
+    num = parseInt(num)
+
+
     if(isNaN(num)){
         return res.status(400).json({number: "alphabet", error: true});
     }
@@ -25,7 +31,7 @@ export const routerController = async(req, res)=>{
 
     try {
 
-        const digitSum = num.toString().split('').reduce((acc, digit) => acc + parseInt(digit), 0);
+        const digitSum = Math.abs(num).toString().split('').reduce((acc, digit) => acc + parseInt(digit), 0);
 
         const response = {
             number: num.toString(),
