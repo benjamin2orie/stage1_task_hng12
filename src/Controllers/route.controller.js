@@ -5,7 +5,7 @@ import axios from 'axios';
 import { isPerfect, isPrime, isArmstrong } from "./helper.functions.js";
 export const routerController = async(req, res)=>{
 
-    const num = parseInt(req.params.number);
+    const num = parseInt(req.query.number);
     if(isNaN(num)){
         return res.status(400).json({number: "alphabet", error: true});
     }
