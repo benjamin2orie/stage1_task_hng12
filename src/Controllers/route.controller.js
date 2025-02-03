@@ -10,7 +10,7 @@ export const routerController = async(req, res)=>{
 
  
         if (!/^-?\d+$/.test(numStr)) {
-            return res.status(400).json({ number: "alphabet or invalid character", error: true });
+            return res.status(400).json({ number: "alphabet", error: true });
         }
     
         // Parse the number after validation
@@ -40,11 +40,11 @@ export const routerController = async(req, res)=>{
         const digitSum = num < 0 ? -absoluteSum : absoluteSum;
 
         const response = {
-            number: num.toString(),
-            is_prime: isPrime(num).toString(),
-            is_perfect: isPerfect(num).toString(),
+            number: num,
+            is_prime: isPrime(num),
+            is_perfect: isPerfect(num),
             properties: [],
-            digit_sum: digitSum.toString(),
+            digit_sum: digitSum,
             fun_fact: funFact
         };
 
