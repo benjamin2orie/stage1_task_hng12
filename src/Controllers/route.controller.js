@@ -5,11 +5,16 @@ import axios from 'axios';
 import { isPerfect, isPrime, isArmstrong } from "./helper.functions.js";
 export const routerController = async(req, res)=>{
 
-    let num = req.query.number;
+    let numStr = req.query.number;
 
 
-    num = num.replace(/[^0-9-]/g, '');
-    num = parseInt(num)
+ 
+        if (!/^-?\d+$/.test(numStr)) {
+            return res.status(400).json({ number: "alphabet or invalid character", error: true });
+        }
+    
+        // Parse the number after validation
+        const num = parseInt(numStr);
 
 
     if(isNaN(num)){
