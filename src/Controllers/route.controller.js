@@ -48,7 +48,7 @@ export const routerController = async(req, res)=>{
             fun_fact: funFact
         };
 
-        if ((num >= 1 && num <= 9) || (num >= -9 && num <= -1)) {
+        if (num >= 1 && num <= 9) {
             response.properties.push('armstrong');
         } else if (isArmstrong(num)) {
             response.properties.push('armstrong');

@@ -27,7 +27,6 @@ app.get('/', async(req, res)=>{
 
 app.listen(port, ()=>{
     console.log(`The server is running on port ${port}`);
-    console.log(6%3)
 });
 
 
