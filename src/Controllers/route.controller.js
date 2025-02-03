@@ -36,7 +36,8 @@ export const routerController = async(req, res)=>{
 
     try {
 
-        const digitSum = Math.abs(num).toString().split('').reduce((acc, digit) => acc + parseInt(digit), 0);
+        const absoluteSum = Math.abs(num).toString().split('').reduce((acc, digit) => acc + parseInt(digit), 0);
+        const digitSum = num < 0 ? -absoluteSum : absoluteSum;
 
         const response = {
             number: num.toString(),
