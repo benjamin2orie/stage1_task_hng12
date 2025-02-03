@@ -47,15 +47,17 @@ export const routerController = async(req, res)=>{
             digit_sum: digitSum.toString(),
             fun_fact: funFact
         };
-    
-        if(isArmstrong(num) && num % 2 !== 0){
-            response.properties.push('armstrong', 'odd')
-        } else if(isArmstrong(num) && num % 2 === 0){
-            response.properties.push('armstrong', 'even')
-        } else if(!isArmstrong(num) && num % 2 !== 0){
-            response.properties.push('odd')
-        } else if(!isArmstrong(num) && num % 2 === 0){
-            response.properties.push('even')
+
+        if ((num >= 1 && num <= 9) || (num >= -9 && num <= -1)) {
+            response.properties.push('armstrong');
+        } else if (isArmstrong(num)) {
+            response.properties.push('armstrong');
+        }
+
+        if (num % 2 !== 0) {
+            response.properties.push('odd');
+        } else {
+            response.properties.push('even');
         }
     
         res.status(200).json(response);
