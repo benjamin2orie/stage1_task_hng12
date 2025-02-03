@@ -19,6 +19,9 @@ app.use(cors({
 }));
 
 app.use('/api', router);
+app.get('/', async(req, res)=>{
+    res.send("<h1>404 not found! Please check the url and enter the data in a correct format</h1>")
+});
 
 
 

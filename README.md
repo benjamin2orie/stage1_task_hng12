@@ -19,7 +19,7 @@ You can run the project on your local machine with the following steps:
 
 3 Clone the repo by entering this command in your current directory
 
-# git clone https://github.com/benjamin2orie/Stage0-task
+# git clone https://github.com/benjamin2orie/stage1_task_hng12
 
 
 4 Enter this command to open the Vs code
@@ -41,7 +41,7 @@ You can run the project on your local machine with the following steps:
 ## Api Documentation:
 
 ## Endpoint URL:
-[endpoint-url] (https://stage0-task.onrender.com/api/v1/info)
+[endpoint-url] (https://stage1-task-hng12.vercel.app/api/classify-number/[put any integer here])
 
 # Method:
 GET
@@ -80,4 +80,4 @@ The response will be in JSON format and includes the following fields:
 
 ## Example Usage
 
- [GET] (https://stage0-task.onrender.com/api/v1/info)
+ [GET] (https://stage1-task-hng12.vercel.app/api/classify-number/[put any integer here])
