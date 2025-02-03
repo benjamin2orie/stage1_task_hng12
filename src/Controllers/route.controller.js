@@ -24,12 +24,15 @@ export const routerController = async(req, res)=>{
 
 
     try {
+
+        const digitSum = num.toString().split('').reduce((acc, digit) => acc + parseInt(digit), 0);
+
         const response = {
             number: num.toString(),
             is_prime: isPrime(num).toString(),
             is_perfect: isPerfect(num).toString(),
             properties: [],
-            digit_sum: num.toString().split(' ').reduce((acc, digit) => acc + parseInt(digit), 0).toString(),
+            digit_sum: digitSum.toString(),
             fun_fact: funFact
         };
     
